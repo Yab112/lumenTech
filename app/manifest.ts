@@ -10,16 +10,20 @@ export default function manifest(): MetadataRoute.Manifest {
     display: "standalone",
     background_color: "#ffffff",
     theme_color: "#1e40af",
+    orientation: "portrait-primary",
+    scope: "/",
+    lang: "en",
+    categories: ["business", "productivity", "technology"],
     icons: [
       {
-        src: "/logo.jpg",
+        src: "/logooctopus.png",
         sizes: "192x192",
-        type: "image/jpeg",
+        type: "image/png",
       },
       {
-        src: "/logo.jpg",
+        src: "/logooctopus.png",
         sizes: "512x512",
-        type: "image/jpeg",
+        type: "image/png",
       },
     ],
   };

@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   authors: [{ name: "OctopusTech" }],
   creator: "OctopusTech",
   publisher: "OctopusTech",
-  metadataBase: new URL("https://www.octopustech.com/"),
+  metadataBase: new URL("https://octopustech.vercel.app/"),
   alternates: {
     canonical: "/",
   },
@@ -25,11 +25,11 @@ export const metadata: Metadata = {
     title: "OctopusTech - Global Software Solutions",
     description:
       "OctopusTech is a global team of 4 passionate developers creating custom software solutions. We specialize in web applications, mobile apps, and cloud solutions for growing businesses.",
-    url: "https://www.octopustech.com/",
+    url: "https://octopustech.vercel.app/",
     siteName: "OctopusTech",
     images: [
       {
-        url: "https://www.octopustech.com/og-image2.png",
+        url: "https://octopustech.vercel.app/og-image2.png",
         width: 1200,
         height: 630,
         alt: "OctopusTech - Global Software Solutions",
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     title: "OctopusTech - Global Software Solutions",
     description:
       "OctopusTech is a global team of 4 passionate developers creating custom software solutions. We specialize in web applications, mobile apps, and cloud solutions for growing businesses.",
-    images: ["https://www.octopustech.com/og-image2.png"],
+    images: ["https://octopustech.vercel.app/og-image2.png"],
     creator: "@octopustech",
   },
   robots: {
@@ -95,8 +95,8 @@ html {
               "@context": "https://schema.org",
               "@type": "Organization",
               name: "OctopusTech",
-              url: "https://www.haritechnology.com.et",
-              logo: "https://www.haritechnology.com.et/logo.jpg",
+              url: "https://octopustech.vercel.app",
+              logo: "https://octopustech.vercel.app/logooctopus.png",
               description:
                 "Enterprise-grade software solutions for Fortune 500 companies and high-growth startups",
               address: {
@@ -109,8 +109,8 @@ html {
                 availableLanguage: "English",
               },
               sameAs: [
-                "https://twitter.com/haritechnology",
-                "https://linkedin.com/company/haritechnology",
+                "https://twitter.com/octopustech",
+                "https://linkedin.com/company/octopustech",
               ],
             }),
           }}
@@ -126,7 +126,7 @@ html {
         />
         <meta
           property="og:image"
-          content="https://www.haritechnology.com.et/og-image2.png"
+          content="https://octopustech.vercel.app/og-image2.png"
         />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
@@ -134,7 +134,7 @@ html {
           property="og:image:alt"
           content="OctopusTech - Global Software Solutions"
         />
-        <meta property="og:url" content="https://www.haritechnology.com.et/" />
+        <meta property="og:url" content="https://octopustech.vercel.app/" />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="OctopusTech" />
 
@@ -150,32 +150,32 @@ html {
         />
         <meta
           name="twitter:image"
-          content="https://www.haritechnology.com.et/og-image2.png"
+          content="https://octopustech.vercel.app/og-image2.png"
         />
-        <meta name="twitter:creator" content="@haritechnology" />
+        <meta name="twitter:creator" content="@octopustech" />
 
         {/* Telegram-specific meta tags for better preview */}
-        <meta name="telegram:channel" content="@haritechnology" />
-        <meta name="telegram:site" content="@haritechnology" />
+        <meta name="telegram:channel" content="@octopustech" />
+        <meta name="telegram:site" content="@octopustech" />
 
         {/* Additional meta tags for better compatibility */}
         <meta
           name="image"
-          content="https://www.haritechnology.com.et/og-image2.png"
+          content="https://octopustech.vercel.app/og-image2.png"
         />
         <meta
           name="thumbnail"
-          content="https://www.haritechnology.com.et/og-image2.png"
+          content="https://octopustech.vercel.app/og-image2.png"
         />
         <meta
           name="msapplication-TileImage"
-          content="https://www.haritechnology.com.et/og-image2.png"
+          content="https://octopustech.vercel.app/og-image2.png"
         />
       </head>
       <body className={inter.className}>
         <ThemeProvider
           attribute="class"
-          defaultTheme="system"
+          defaultTheme="light"
           enableSystem
           disableTransitionOnChange
         >
