@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: "/",
       disallow: ["/api/", "/admin/", "/private/"],
     },
-    sitemap: "https://octopustech.vercel.app/sitemap.xml",
+    sitemap: "https://lumentech.vercel.app/sitemap.xml",
   };
 }

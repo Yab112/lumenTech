@@ -1,11 +1,11 @@
-# OctopusTech
+# LumenTech
 
-![OctopusTech](https://img.shields.io/badge/OctopusTech-Global%20Solutions-blue?style=for-the-badge&logo=code)
+![LumenTech](https://img.shields.io/badge/LumenTech-Global%20Solutions-blue?style=for-the-badge&logo=code)
 ![Status](https://img.shields.io/badge/Status-Active%20Development-green?style=for-the-badge)
 
-## About OctopusTech
+## About LumenTech
 
-OctopusTech is a global team of 4 passionate developers creating custom software solutions for growing businesses. We specialize in web applications, mobile apps, backend development, and cloud solutions that help businesses succeed in the digital world.
+LumenTech is a global team of passionate developers creating custom software solutions for growing businesses. We specialize in web applications, mobile apps, backend development, and cloud solutions that help businesses succeed in the digital world.
 
 ## Our Services
 
@@ -29,9 +29,9 @@ Scalable cloud-based applications and infrastructure that ensure your business c
 
 Robust backend systems and APIs that power your applications with performance, security, and scalability in mind.
 
-## Why Choose OctopusTech?
+## Why Choose LumenTech?
 
-- **Small Team, Big Impact**: 4 experienced developers with direct client access
+- **Expert Team**: Experienced developers with direct client access
 - **Quality Focus**: Clean code, best practices, and thorough testing
 - **Personal Touch**: Direct communication with the development team
 - **Global Reach**: Distributed team working across time zones
@@ -71,15 +71,16 @@ Our clients have achieved great results:
 
 Ready to transform your business with cutting-edge technology? Contact us today for a free consultation.
 
-- **Email**: [Contact us through our website](https://octopustech.com)
-- **Website**: [https://octopustech.com](https://octopustech.com)
+- **Email**: [Contact us through our website](https://lumentech.vercel.app)
+- **Website**: [https://lumentech.vercel.app](https://lumentech.vercel.app)
+- **Upwork Agency**: [https://www.upwork.com/agencies/1960387200481392711/](https://www.upwork.com/agencies/1960387200481392711/)
 
 ## Free 30-Min Discovery Call
 
-Book a free consultation to discuss your project requirements and explore how OctopusTech can help you achieve your technology goals.
+Book a free consultation to discuss your project requirements and explore how LumenTech can help you achieve your technology goals.
 
 ---
 
-**OctopusTech - Global Software Solutions**
+**LumenTech - Global Software Solutions**
 
 _Building software solutions that help businesses grow and succeed_

@@ -43,12 +43,12 @@ export function LoadingScreen({ isLoading }: LoadingScreenProps) {
       >
         <div className="flex items-center justify-center space-x-3 mb-4">
           <img
-            src="/logooctopus.png"
-            alt="OctopusTech Logo"
+            src="/lumen.jpeg"
+            alt="LumenTech Logo"
             className="w-12 h-12 rounded-lg"
           />
           <div className="text-3xl font-bold text-slate-900 dark:text-white">
-            OctopusTech
+            LumenTech
           </div>
         </div>
         <div className="text-slate-600 dark:text-slate-400">

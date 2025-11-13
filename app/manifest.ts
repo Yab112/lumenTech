@@ -2,10 +2,10 @@ import { MetadataRoute } from "next";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: "OctopusTech - Global Software Solutions",
-    short_name: "OctopusTech",
+    name: "LumenTech - Global Software Solutions",
+    short_name: "LumenTech",
     description:
-      "Global team of 4 passionate developers creating custom software solutions for growing businesses",
+      "Global team of passionate developers creating custom software solutions for growing businesses",
     start_url: "/",
     display: "standalone",
     background_color: "#ffffff",
@@ -16,14 +16,14 @@ export default function manifest(): MetadataRoute.Manifest {
     categories: ["business", "productivity", "technology"],
     icons: [
       {
-        src: "/logooctopus.png",
+        src: "/lumen.jpeg",
         sizes: "192x192",
-        type: "image/png",
+        type: "image/jpeg",
       },
       {
-        src: "/logooctopus.png",
+        src: "/lumen.jpeg",
         sizes: "512x512",
-        type: "image/png",
+        type: "image/jpeg",
       },
     ],
   };

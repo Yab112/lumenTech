@@ -190,7 +190,7 @@ export function HeroSection({ scrollToSection }: HeroSectionProps) {
             className="mb-8 sm:mb-12"
           >
             <p className="text-base sm:text-lg md:text-xl lg:text-xl text-slate-600 dark:text-slate-300 leading-relaxed max-w-4xl mx-auto ">
-              We are a global team of 4 passionate developers creating custom
+              We are a global team of passionate developers creating custom
               software solutions. From web applications to mobile apps and cloud
               systems, we deliver quality technology that grows with your
               business.

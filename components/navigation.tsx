@@ -81,12 +81,12 @@ export function Navigation({ scrollToSection }: NavigationProps) {
               className="flex items-center space-x-3"
             >
               <img
-                src="/logooctopus.png"
-                alt="OctopusTech Logo"
+                src="/lumen.jpeg"
+                alt="LumenTech Logo"
                 className="w-8 h-8 rounded-lg"
               />
               <span className="text-xl font-bold text-blue-900 dark:text-blue-400">
-                OctopusTech
+                LumenTech
               </span>
             </motion.div>
 
@@ -152,12 +152,12 @@ export function Navigation({ scrollToSection }: NavigationProps) {
               className="flex items-center space-x-2"
             >
               <img
-                src="/logooctopus.png"
-                alt="OctopusTech Logo"
+                src="/lumen.jpeg"
+                alt="LumenTech Logo"
                 className="w-6 h-6 rounded"
               />
               <span className="text-lg font-bold text-slate-900 dark:text-blue-400">
-                OctopusTech
+                LumenTech
               </span>
             </motion.div>
 

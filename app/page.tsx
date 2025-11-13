@@ -19,7 +19,7 @@ import { links } from "./constants/navitems";
 
 import Stat from "@/components/sections/stat";
 
-export default function OctopusTechWebsite() {
+export default function LumenTechWebsite() {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {

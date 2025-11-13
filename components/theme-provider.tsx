@@ -11,7 +11,7 @@ export function ThemeProvider({ children, ...props }: ThemeProviderProps) {
     <NextThemesProvider
       attribute="class"
       defaultTheme="light"
-      enableSystem
+      enableSystem={props.enableSystem !== undefined ? props.enableSystem : true}
       disableTransitionOnChange
       {...props}
     >

@@ -35,8 +35,8 @@ const features = [
     icon: Users,
     title: "Dedicated Team",
     description:
-      "Our team of 4 experienced developers works closely with you. Direct communication and personalized attention for every project.",
-    metric: "4 Experts",
+      "Our team of experienced developers works closely with you. Direct communication and personalized attention for every project.",
+    metric: "Expert Team",
   },
   {
     icon: Award,
@@ -135,14 +135,14 @@ export function SolutionsSection() {
             className="mb-6 px-6 py-3 bg-gradient-to-r from-blue-100 to-purple-100 dark:from-blue-900/30 dark:to-purple-900/30 text-blue-700 dark:text-blue-300 border-blue-200 dark:border-blue-700 font-semibold rounded-xl"
           >
             <Sparkles className="w-4 h-4 mr-2" />
-            Why Choose OctopusTech
+            Why Choose LumenTech
           </Badge>
 
           <HeaderWithTitleLine titleLineColor="#2563eb" animationDelay={0.2}>
             <h2 className="text-2xl sm:text-3xl md:text-5xl lg:text-5xl  text-neutral-900 dark:text-white mb-6 leading-tight">
               Why Businesses
               <br />
-              <span className="text-blue-600">Choose OctopusTech</span>
+              <span className="text-blue-600">Choose LumenTech</span>
             </h2>
           </HeaderWithTitleLine>
 
@@ -184,10 +184,10 @@ export function SolutionsSection() {
                   className="w-full sm:w-1/3 flex-shrink-0 px-1 sm:px-4"
                 >
                   <div className="group relative text-center bg-white dark:bg-slate-800 rounded-xl sm:rounded-2xl p-3 sm:p-6 shadow-sm sm:shadow-md h-full overflow-hidden transition-all duration-500 hover:shadow-xl hover:shadow-blue-500/20 hover:scale-105">
-                    {/* Background Octopus Image - Shows on Hover */}
+                    {/* Background Lumen Image - Shows on Hover */}
                     <div
                       className="absolute inset-0 opacity-0 group-hover:opacity-10 transition-opacity duration-500 bg-cover bg-center bg-no-repeat rounded-xl sm:rounded-2xl"
-                      style={{ backgroundImage: "url(/octopus.jpeg)" }}
+                      style={{ backgroundImage: "url(/lumen.jpeg)" }}
                     ></div>
 
                     {/* Gradient Overlay for better text readability */}

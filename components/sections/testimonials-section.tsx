@@ -8,7 +8,7 @@ import { HeaderWithTitleLine } from "@/components/ui/header-with-title-line";
 const testimonials = [
   {
     content:
-      "OctopusTech delivered an excellent web application for our startup. The team was responsive, professional, and delivered exactly what we needed. Their attention to detail and clean code made future updates easy.",
+      "LumenTech delivered an excellent web application for our startup. The team was responsive, professional, and delivered exactly what we needed. Their attention to detail and clean code made future updates easy.",
     rating: 5,
     client: "Sarah Johnson",
     position: "Founder",
@@ -19,7 +19,7 @@ const testimonials = [
   },
   {
     content:
-      "Working with OctopusTech was a great experience. They built our mobile app quickly and efficiently. The team communicated well throughout the project and delivered a quality product that our users love.",
+      "Working with LumenTech was a great experience. They built our mobile app quickly and efficiently. The team communicated well throughout the project and delivered a quality product that our users love.",
     rating: 5,
     client: "Michael Chen",
     position: "Product Manager",
@@ -30,7 +30,7 @@ const testimonials = [
   },
   {
     content:
-      "The team at OctopusTech helped us modernize our backend systems. They were knowledgeable, easy to work with, and delivered a robust solution that scales with our business growth.",
+      "The team at LumenTech helped us modernize our backend systems. They were knowledgeable, easy to work with, and delivered a robust solution that scales with our business growth.",
     rating: 5,
     client: "Emily Rodriguez",
     position: "CTO",
@@ -41,7 +41,7 @@ const testimonials = [
   },
   {
     content:
-      "OctopusTech's cloud solutions helped us migrate to AWS smoothly. Their expertise and guidance made the transition seamless. We're very satisfied with the results and ongoing support.",
+      "LumenTech's cloud solutions helped us migrate to AWS smoothly. Their expertise and guidance made the transition seamless. We're very satisfied with the results and ongoing support.",
     rating: 5,
     client: "David Kim",
     position: "DevOps Lead",
@@ -63,7 +63,7 @@ const testimonials = [
   },
   {
     content:
-      "OctopusTech helped us build our MVP quickly and cost-effectively. Their team was professional, delivered on time, and provided great ongoing support. Perfect for startups and growing businesses.",
+      "LumenTech helped us build our MVP quickly and cost-effectively. Their team was professional, delivered on time, and provided great ongoing support. Perfect for startups and growing businesses.",
     rating: 5,
     client: "Robert Wilson",
     position: "CEO",
@@ -96,7 +96,7 @@ export function TestimonialsSection() {
           </HeaderWithTitleLine>
 
           <p className="text-sm sm:text-base md:text-xl text-slate-600 dark:text-slate-300 max-w-4xl mx-auto leading-relaxed">
-            See what our clients say about working with OctopusTech. We're proud
+            See what our clients say about working with LumenTech. We're proud
             to help businesses of all sizes succeed with technology.
           </p>
         </div>

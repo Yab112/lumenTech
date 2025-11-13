@@ -13,6 +13,7 @@ import {
   MapPin,
   Loader2,
   Sparkles,
+  ExternalLink,
 } from "lucide-react";
 import { useState } from "react";
 import { toast } from "sonner"; // Import Sonner toast
@@ -136,7 +137,7 @@ export function ContactSection({ scrollToSection }: ContactSectionProps) {
     {
       icon: Phone,
       title: "Phone",
-      info: ["+251 962 473 792", "+251 987 370 536"],
+      info: "+251 962 473 792",
       description: "Mon-Fri from 8am to 6pm",
       action: handlePhoneClick,
     },
@@ -381,6 +382,45 @@ export function ContactSection({ scrollToSection }: ContactSectionProps) {
                   </a>
                   .
                 </p>
+              </div>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              onClick={() => window.open("https://www.upwork.com/agencies/1960387200481392711/", "_blank")}
+              className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-blue-600 via-blue-500 to-purple-600 border-2 border-blue-400 transition-all duration-300 p-4 sm:p-6 cursor-pointer hover:shadow-2xl hover:shadow-blue-500/50 hover:scale-[1.02] group"
+            >
+              {/* Decorative background elements */}
+              <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full blur-2xl"></div>
+              <div className="absolute bottom-0 left-0 w-24 h-24 bg-purple-400/20 rounded-full blur-xl"></div>
+              
+              <div className="relative z-10 flex items-center">
+                <div className="w-12 h-12 sm:w-14 sm:h-14 flex items-center justify-center mr-4 bg-white/20 backdrop-blur-sm rounded-xl group-hover:bg-white/30 transition-colors border border-white/30">
+                  <ExternalLink className="w-6 h-6 sm:w-7 sm:h-7 text-white" />
+                </div>
+                <div className="flex-1">
+                  <div className="flex items-center gap-2 mb-2">
+                    <h4 className="font-bold text-white text-base sm:text-lg flex items-center gap-2">
+                      Upwork Agency
+                      <ExternalLink className="w-4 h-4 text-white/90" />
+                    </h4>
+                    <Badge className="bg-green-500 text-white text-xs px-2 py-0.5 border-0">
+                      Verified
+                    </Badge>
+                  </div>
+                  <p className="text-white/90 text-xs sm:text-sm font-medium mb-1">
+                    Check our verified Upwork profile
+                  </p>
+                  <p className="text-white/70 text-xs flex items-center gap-1">
+                    <span>⭐ Top Rated</span>
+                    <span>•</span>
+                    <span>View our portfolio</span>
+                  </p>
+                </div>
+                <div className="ml-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                  <ArrowRight className="w-5 h-5 text-white" />
+                </div>
               </div>
             </motion.div>
           </motion.div>

@@ -24,8 +24,8 @@ export function FloatingActions() {
     if (navigator.share) {
       try {
         await navigator.share({
-          title: "OctopusTech - Global Software Solutions",
-          text: "Check out OctopusTech for amazing software solutions!",
+          title: "LumenTech - Global Software Solutions",
+          text: "Check out LumenTech for amazing software solutions!",
           url: window.location.href,
         });
       } catch (err) {

@@ -14,6 +14,7 @@ import {
   ArrowRight,
   Star,
   TrendingUp,
+  ExternalLink,
 } from "lucide-react";
 import { HeaderWithTitleLine } from "@/components/ui/header-with-title-line";
 
@@ -89,7 +90,7 @@ export function AboutSection() {
             className="mb-6 px-6 py-3 bg-gradient-to-r from-blue-100 to-purple-100 dark:from-blue-900/30 dark:to-purple-900/30 text-blue-700 dark:text-blue-300 border-blue-200 dark:border-blue-700 font-semibold rounded-xl"
           >
             <Sparkles className="w-4 h-4 mr-2" />
-            About OctopusTech
+            About LumenTech
           </Badge>
 
           <HeaderWithTitleLine titleLineColor="#2563eb" animationDelay={0.2}>
@@ -101,7 +102,7 @@ export function AboutSection() {
           </HeaderWithTitleLine>
 
           <p className="text-base sm:text-base text-slate-600 dark:text-slate-300 max-w-4xl mx-auto leading-relaxed">
-            We are a global team of 4 passionate developers creating custom
+            We are a global team of passionate developers creating custom
             software solutions. Our mission is to help businesses grow with
             reliable, scalable technology that adapts to their needs.
           </p>
@@ -124,7 +125,7 @@ export function AboutSection() {
               >
                 <img
                   src="/aboutus.jpg"
-                  alt="OctopusTech Team"
+                  alt="LumenTech Team"
                   className="w-full h-auto object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent" />
@@ -236,6 +237,58 @@ export function AboutSection() {
                 ))}
               </div>
             </div>
+
+            {/* Upwork Agency Link */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.4 }}
+              onClick={() => window.open("https://www.upwork.com/agencies/1960387200481392711/", "_blank")}
+              className="mt-8 relative overflow-hidden rounded-2xl bg-gradient-to-br from-blue-600 via-blue-500 to-purple-600 border-2 border-blue-400 cursor-pointer hover:shadow-2xl hover:shadow-blue-500/50 hover:scale-[1.02] transition-all duration-300 group"
+            >
+              {/* Decorative background elements */}
+              <div className="absolute top-0 right-0 w-40 h-40 bg-white/10 rounded-full blur-3xl"></div>
+              <div className="absolute bottom-0 left-0 w-32 h-32 bg-purple-400/20 rounded-full blur-2xl"></div>
+              
+              <div className="relative z-10 p-6 sm:p-8">
+                <div className="flex items-center justify-between flex-wrap gap-4">
+                  <div className="flex items-center space-x-4 sm:space-x-6">
+                    <div className="w-16 h-16 sm:w-20 sm:h-20 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center group-hover:bg-white/30 transition-colors border-2 border-white/30 shadow-lg">
+                      <ExternalLink className="w-8 h-8 sm:w-10 sm:h-10 text-white" />
+                    </div>
+                    <div>
+                      <div className="flex items-center gap-3 mb-2 flex-wrap">
+                        <h4 className="text-xl sm:text-2xl font-bold text-white flex items-center gap-2">
+                          Verified Upwork Agency
+                          <ExternalLink className="w-5 h-5 sm:w-6 sm:h-6 text-white/90" />
+                        </h4>
+                        <Badge className="bg-green-500 text-white text-xs sm:text-sm px-3 py-1 border-0 shadow-lg">
+                          ✓ Verified
+                        </Badge>
+                      </div>
+                      <p className="text-white/90 text-sm sm:text-base mb-2 max-w-2xl">
+                        Check out our verified Upwork agency profile to see our ratings, reviews, and completed projects.
+                      </p>
+                      <div className="flex items-center gap-4 text-white/80 text-xs sm:text-sm">
+                        <span className="flex items-center gap-1">
+                          <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+                          Top Rated
+                        </span>
+                        <span>•</span>
+                        <span>100% Job Success</span>
+                        <span>•</span>
+                        <span>25+ Projects</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                    <span className="text-white text-sm font-medium">View Profile</span>
+                    <ArrowRight className="w-5 h-5 sm:w-6 sm:h-6 text-white group-hover:translate-x-1 transition-transform" />
+                  </div>
+                </div>
+              </div>
+            </motion.div>
           </motion.div>
         </div>
       </div>

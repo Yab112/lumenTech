@@ -158,7 +158,7 @@ const CalendlyEmbed = () => {
                   </div>
                   <div>
                     <h3 className="text-lg sm:text-xl md:text-2xl font-bold">
-                      OctopusTech
+                      LumenTech
                     </h3>
                     <p className="text-slate-200 text-sm sm:text-lg">
                       30 min discovery call
