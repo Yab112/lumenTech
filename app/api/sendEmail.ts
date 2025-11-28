@@ -4,7 +4,6 @@ const sendEmail = async (formData: {
   email: string;
   companyName: string;
   phoneNumber: string;
-  budget: string;
   projectDetails: string;
 }) => {
   try {

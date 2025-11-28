@@ -6,7 +6,9 @@ import { AboutSection } from "@/components/sections/about-section";
 import { ServicesSection } from "@/components/sections/services-section";
 import { SolutionsSection } from "@/components/sections/solutions-section";
 import { TestimonialsSection } from "@/components/sections/testimonials-section";
+import { TeamSection } from "@/components/sections/team-section";
 import { ContactSection } from "@/components/sections/contact-section";
+import { FooterSection } from "@/components/sections/footer-section";
 import { CursorTrail } from "@/components/ui/cursor-trail";
 import { StatusBar } from "@/components/ui/status-bar";
 import { FloatingActions } from "@/components/ui/floating-actions";
@@ -57,8 +59,9 @@ export default function LumenTechWebsite() {
             <ServicesSection />
             <SolutionsSection />
             <TestimonialsSection />
+            <TeamSection />
             <ContactSection scrollToSection={scrollToSection} />
-            {/* <FooterSection  /> */}
+            <FooterSection />
           </div>
           <FloatingDock
             items={links}

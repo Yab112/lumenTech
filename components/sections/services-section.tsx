@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { services } from "@/app/constants/services";
-import { CheckCircle, ArrowRight, Sparkles, ExternalLink } from "lucide-react";
+import { ArrowRight, ExternalLink } from "lucide-react";
 import { useState } from "react";
 import { HeaderWithTitleLine } from "@/components/ui/header-with-title-line";
 
@@ -55,7 +55,6 @@ export function ServicesSection() {
             variant="secondary"
             className="mb-6 px-6 py-3 bg-gradient-to-r from-blue-100 to-purple-100 dark:from-blue-900/30 dark:to-purple-900/30 text-blue-700 dark:text-blue-300 border-blue-200 dark:border-blue-700 font-semibold rounded-xl"
           >
-            <Sparkles className="w-4 h-4 mr-2" />
             Our Services
           </Badge>
           
@@ -133,28 +132,9 @@ export function ServicesSection() {
                   </h3>
 
                   {/* Description */}
-                  <p className="text-sm sm:text-base text-slate-600 dark:text-slate-300 mb-6 leading-relaxed flex-grow">
+                  <p className="text-sm sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed flex-grow">
                     {service.description}
                   </p>
-
-                  {/* Features */}
-                  <div className="space-y-3 mb-6">
-                    {service.features.slice(0, 3).map((feature, idx) => (
-                      <motion.div
-                        key={idx}
-                        initial={{ opacity: 0, x: -20 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ delay: 0.1 * idx }}
-                        className="flex items-center text-slate-700 dark:text-slate-300"
-                      >
-                        <div className="w-5 h-5 bg-blue-600 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
-                          <CheckCircle className="w-3 h-3 text-white" />
-                        </div>
-                        <span className="text-sm font-medium">{feature}</span>
-                      </motion.div>
-                    ))}
-                  </div>
                 </div>
 
                 {/* Hover Effect Border */}

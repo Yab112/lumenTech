@@ -12,9 +12,9 @@ import {
 export const services = [
   {
     icon: Code2,
-    title: "Web Application Development",
+    title: "Full-Stack Product Development",
     description:
-      "Build modern, responsive web applications that grow with your business. We create fast, scalable solutions using the latest technologies.",
+      "Handling everything from backend architecture to frontend interfaces. We build complete, scalable products that deliver real business outcomes for startups and growing companies.",
     features: [
       "React/Next.js",
       "Responsive Design",
@@ -26,65 +26,65 @@ export const services = [
   },
   {
     icon: Smartphone,
-    title: "Mobile App Development",
+    title: "Cross-Platform Mobile Apps",
     description:
-      "Create engaging mobile experiences for iOS and Android. We develop cross-platform solutions that work seamlessly across all devices.",
+      "Using Flutter and React Native to build apps that deploy across iOS and Android. We create engaging mobile experiences that work seamlessly across all devices.",
     features: [
       "React Native",
+      "Flutter",
       "iOS & Android",
       "Cross-platform",
-      "App Store Ready",
     ],
     metrics: "LumenTech",
     image: "/mobile.jpg",
   },
   {
     icon: Database,
-    title: "Backend & API Development",
+    title: "Microservices & Event-Driven Systems",
     description:
-      "Build robust backend systems and APIs that power your applications. We focus on performance, security, and scalability.",
+      "Designing future-proof architectures with Domain-Driven Design (DDD), message queues, and real-time pipelines. We build robust backend systems that power your applications with performance, security, and scalability.",
     features: [
-      "RESTful APIs",
-      "Database Design",
-      "Authentication",
-      "Real-time Features",
+      "Domain-Driven Design",
+      "Message Queues",
+      "Real-time Pipelines",
+      "Microservices Architecture",
     ],
     metrics: "LumenTech",
     image: "/database.jpg",
   },
   {
     icon: Cloud,
-    title: "Cloud Solutions",
+    title: "Cloud-Native Infrastructure",
     description:
-      "Deploy and manage your applications in the cloud. We help you choose the right cloud platform and optimize your infrastructure.",
-    features: ["AWS/Azure", "Docker", "CI/CD", "Monitoring"],
+      "Implementing CI/CD, Docker, serverless architectures, and scalable deployments on platforms like GCP, AWS, and Firebase. We help you choose the right cloud platform and optimize your infrastructure for maximum performance.",
+    features: ["GCP/AWS/Firebase", "Docker", "CI/CD", "Serverless"],
     metrics: "LumenTech",
     image: "/cloud.jpg",
   },
   {
     icon: Brain,
-    title: "AI Agent Development",
+    title: "AI/ML and Automation",
     description:
-      "Build intelligent AI agents and automation systems that enhance your business processes. From chatbots to complex AI workflows, we create smart solutions.",
+      "Integrating advanced AI features such as large language models (LLMs), chatbots, recommendation engines, retrieval-augmented generation (RAG) pipelines, and automation capabilities. We build intelligent systems that enhance your business processes.",
     features: [
-      "AI Chatbots",
-      "LLM Integration",
+      "LLMs & Chatbots",
+      "RAG Pipelines",
+      "Recommendation Engines",
       "Automation",
-      "Machine Learning",
     ],
     metrics: "LumenTech",
     image: "/ai.jpg",
   },
   {
     icon: Settings,
-    title: "DevOps & Infrastructure",
+    title: "Real-Time & Secure Workflows",
     description:
-      "Streamline your development workflow with automated CI/CD pipelines, containerization, and infrastructure management. We ensure reliable deployments.",
+      "Managing notifications, live collaboration tools, authentication, and authorization securely and effectively. We streamline your development workflow with automated CI/CD pipelines, containerization, and infrastructure management.",
     features: [
+      "Real-time Collaboration",
+      "Secure Authentication",
       "CI/CD Pipelines",
-      "Containerization",
-      "Infrastructure as Code",
-      "Monitoring & Logging",
+      "Infrastructure Management",
     ],
     metrics: "LumenTech",
     image: "/service.jpg",

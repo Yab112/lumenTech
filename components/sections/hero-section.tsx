@@ -173,7 +173,7 @@ export function HeroSection({ scrollToSection }: HeroSectionProps) {
                 }}
               >
                 <span
-                  className="inline-block text-[#34D399]"
+                  className="inline-block text-blue-600"
                   style={{ transform: "skew(6deg)" }}
                 >
                   Future
@@ -190,10 +190,11 @@ export function HeroSection({ scrollToSection }: HeroSectionProps) {
             className="mb-8 sm:mb-12"
           >
             <p className="text-base sm:text-lg md:text-xl lg:text-xl text-slate-600 dark:text-slate-300 leading-relaxed max-w-4xl mx-auto ">
-              We are a global team of passionate developers creating custom
-              software solutions. From web applications to mobile apps and cloud
-              systems, we deliver quality technology that grows with your
-              business.
+              We specialize in engineering scalable software tailored for
+              ambitious startups and visionary teams, focusing on delivering
+              real business outcomes. We excel in building high-impact digital
+              platforms, moving products from MVPs to fully scalable SaaS
+              solutions.
             </p>
           </motion.div>
 

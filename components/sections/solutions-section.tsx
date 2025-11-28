@@ -9,7 +9,6 @@ import {
   Award,
   Clock,
   Globe,
-  Sparkles,
   ChevronLeft,
   ChevronRight,
 } from "lucide-react";
@@ -134,7 +133,6 @@ export function SolutionsSection() {
             variant="secondary"
             className="mb-6 px-6 py-3 bg-gradient-to-r from-blue-100 to-purple-100 dark:from-blue-900/30 dark:to-purple-900/30 text-blue-700 dark:text-blue-300 border-blue-200 dark:border-blue-700 font-semibold rounded-xl"
           >
-            <Sparkles className="w-4 h-4 mr-2" />
             Why Choose LumenTech
           </Badge>
 

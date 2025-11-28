@@ -6,7 +6,6 @@ import { Button } from "@/components/ui/button";
 import {
   Target,
   Globe,
-  Sparkles,
   Users,
   Award,
   Zap,
@@ -15,14 +14,15 @@ import {
   Star,
   TrendingUp,
   ExternalLink,
+  Calendar,
 } from "lucide-react";
 import { HeaderWithTitleLine } from "@/components/ui/header-with-title-line";
 
 export function AboutSection() {
   const stats = [
-    { label: "Years Experience", value: "3+", icon: Award },
+    { label: "Year Founded", value: "2023", icon: Calendar },
     { label: "Projects Delivered", value: "25+", icon: CheckCircle },
-    { label: "Team Members", value: "4", icon: Users },
+    { label: "Team Members", value: "11-15", icon: Users },
     { label: "Technologies", value: "10+", icon: Zap },
   ];
 
@@ -89,7 +89,6 @@ export function AboutSection() {
             variant="secondary"
             className="mb-6 px-6 py-3 bg-gradient-to-r from-blue-100 to-purple-100 dark:from-blue-900/30 dark:to-purple-900/30 text-blue-700 dark:text-blue-300 border-blue-200 dark:border-blue-700 font-semibold rounded-xl"
           >
-            <Sparkles className="w-4 h-4 mr-2" />
             About LumenTech
           </Badge>
 
@@ -102,9 +101,11 @@ export function AboutSection() {
           </HeaderWithTitleLine>
 
           <p className="text-base sm:text-base text-slate-600 dark:text-slate-300 max-w-4xl mx-auto leading-relaxed">
-            We are a global team of passionate developers creating custom
-            software solutions. Our mission is to help businesses grow with
-            reliable, scalable technology that adapts to their needs.
+            We specialize in engineering scalable software tailored for
+            ambitious startups and visionary teams, focusing on delivering real
+            business outcomes. Our team consists of top-tier developers,
+            architects, and designers with strong technical expertise and
+            product thinking.
           </p>
         </div>
 
@@ -144,12 +145,12 @@ export function AboutSection() {
                     <Award className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <div className="text-2xl font-bold text-slate-900 dark:text-white">
+                    {/* <div className="text-2xl font-bold text-slate-900 dark:text-white">
                       3+
                     </div>
                     <div className="text-sm text-slate-600 dark:text-slate-400">
                       Years of Experience
-                    </div>
+                    </div> */}
                   </div>
                 </div>
               </motion.div>
@@ -171,12 +172,12 @@ export function AboutSection() {
                       />
                     ))}
                   </div>
-                  <div className="text-sm font-bold text-slate-900 dark:text-white">
+                  {/* <div className="text-sm font-bold text-slate-900 dark:text-white">
                     5.0
                   </div>
                   <div className="text-xs text-slate-600 dark:text-slate-400">
                     Client Rating
-                  </div>
+                  </div> */}
                 </div>
               </motion.div>
             </div>
@@ -200,10 +201,11 @@ export function AboutSection() {
                 </h3>
               </div>
               <p className="text-base text-slate-600 dark:text-slate-300 leading-relaxed">
-                To create high-quality software solutions that help businesses
-                grow and succeed. We believe in building lasting relationships
-                with our clients through reliable, scalable technology and
-                personalized service.
+                To engineer scalable software that delivers real business
+                outcomes for ambitious startups and visionary teams. We excel in
+                building high-impact digital platforms, moving products from
+                MVPs to fully scalable SaaS solutions with our top-tier team of
+                developers, architects, and designers.
               </p>
             </div>
 
@@ -244,13 +246,18 @@ export function AboutSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.4 }}
-              onClick={() => window.open("https://www.upwork.com/agencies/1960387200481392711/", "_blank")}
+              onClick={() =>
+                window.open(
+                  "https://www.upwork.com/agencies/1960387200481392711/",
+                  "_blank"
+                )
+              }
               className="mt-8 relative overflow-hidden rounded-2xl bg-gradient-to-br from-blue-600 via-blue-500 to-purple-600 border-2 border-blue-400 cursor-pointer hover:shadow-2xl hover:shadow-blue-500/50 hover:scale-[1.02] transition-all duration-300 group"
             >
               {/* Decorative background elements */}
               <div className="absolute top-0 right-0 w-40 h-40 bg-white/10 rounded-full blur-3xl"></div>
               <div className="absolute bottom-0 left-0 w-32 h-32 bg-purple-400/20 rounded-full blur-2xl"></div>
-              
+
               <div className="relative z-10 p-6 sm:p-8">
                 <div className="flex items-center justify-between flex-wrap gap-4">
                   <div className="flex items-center space-x-4 sm:space-x-6">
@@ -268,22 +275,15 @@ export function AboutSection() {
                         </Badge>
                       </div>
                       <p className="text-white/90 text-sm sm:text-base mb-2 max-w-2xl">
-                        Check out our verified Upwork agency profile to see our ratings, reviews, and completed projects.
+                        Check out our verified Upwork agency profile to see our
+                        ratings, reviews, and completed projects.
                       </p>
-                      <div className="flex items-center gap-4 text-white/80 text-xs sm:text-sm">
-                        <span className="flex items-center gap-1">
-                          <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
-                          Top Rated
-                        </span>
-                        <span>•</span>
-                        <span>100% Job Success</span>
-                        <span>•</span>
-                        <span>25+ Projects</span>
-                      </div>
                     </div>
                   </div>
                   <div className="flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
-                    <span className="text-white text-sm font-medium">View Profile</span>
+                    <span className="text-white text-sm font-medium">
+                      View Profile
+                    </span>
                     <ArrowRight className="w-5 h-5 sm:w-6 sm:h-6 text-white group-hover:translate-x-1 transition-transform" />
                   </div>
                 </div>

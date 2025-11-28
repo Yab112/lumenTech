@@ -12,7 +12,6 @@ import {
   Phone,
   MapPin,
   Loader2,
-  Sparkles,
   ExternalLink,
 } from "lucide-react";
 import { useState } from "react";
@@ -28,7 +27,6 @@ interface FormData {
   email: string;
   companyName: string;
   phoneNumber: string;
-  budget: string;
   projectDetails: string;
 }
 
@@ -46,7 +44,6 @@ export function ContactSection({ scrollToSection }: ContactSectionProps) {
     email: "",
     companyName: "",
     phoneNumber: "",
-    budget: "",
     projectDetails: "",
   });
   const [isSubmitting, setIsSubmitting] = useState<boolean>(false);
@@ -93,7 +90,6 @@ export function ContactSection({ scrollToSection }: ContactSectionProps) {
           email: "",
           companyName: "",
           phoneNumber: "",
-          budget: "",
           projectDetails: "",
         }); // Reset form
       } else {
@@ -161,7 +157,6 @@ export function ContactSection({ scrollToSection }: ContactSectionProps) {
             variant="secondary"
             className="mb-6 px-6 py-3 bg-gradient-to-r from-blue-100 to-purple-100 dark:from-blue-900/30 dark:to-purple-900/30 text-blue-700 dark:text-blue-300 border-blue-200 dark:border-blue-700 font-semibold rounded-xl"
           >
-            <Sparkles className="w-4 h-4 mr-2" />
             Get In Touch
           </Badge>
 
@@ -252,23 +247,6 @@ export function ContactSection({ scrollToSection }: ContactSectionProps) {
                       />
                     </motion.div>
                   </div>
-                  <motion.div className="space-y-2">
-                    <label className="text-sm font-medium text-slate-700 dark:text-slate-300">
-                      Project Budget
-                    </label>
-                    <select
-                      name="budget"
-                      value={formData.budget}
-                      onChange={handleInputChange}
-                      className="w-full h-10 sm:h-12 border border-slate-300 dark:border-slate-600 rounded-lg px-3 bg-white dark:bg-slate-800 text-slate-900 dark:text-white focus:border-blue-500 focus:ring-blue-500 transition-all duration-200 text-sm"
-                    >
-                      <option value="">Select budget range</option>
-                      <option>$10,000 - $25,000</option>
-                      <option>$25,000 - $50,000</option>
-                      <option>$50,000 - $100,000</option>
-                      <option>$100,000+</option>
-                    </select>
-                  </motion.div>
                   <motion.div className="space-y-2">
                     <label className="text-sm font-medium text-slate-700 dark:text-slate-300">
                       Project Details *
@@ -388,13 +366,18 @@ export function ContactSection({ scrollToSection }: ContactSectionProps) {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              onClick={() => window.open("https://www.upwork.com/agencies/1960387200481392711/", "_blank")}
+              onClick={() =>
+                window.open(
+                  "https://www.upwork.com/agencies/1960387200481392711/",
+                  "_blank"
+                )
+              }
               className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-blue-600 via-blue-500 to-purple-600 border-2 border-blue-400 transition-all duration-300 p-4 sm:p-6 cursor-pointer hover:shadow-2xl hover:shadow-blue-500/50 hover:scale-[1.02] group"
             >
               {/* Decorative background elements */}
               <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full blur-2xl"></div>
               <div className="absolute bottom-0 left-0 w-24 h-24 bg-purple-400/20 rounded-full blur-xl"></div>
-              
+
               <div className="relative z-10 flex items-center">
                 <div className="w-12 h-12 sm:w-14 sm:h-14 flex items-center justify-center mr-4 bg-white/20 backdrop-blur-sm rounded-xl group-hover:bg-white/30 transition-colors border border-white/30">
                   <ExternalLink className="w-6 h-6 sm:w-7 sm:h-7 text-white" />
@@ -413,8 +396,6 @@ export function ContactSection({ scrollToSection }: ContactSectionProps) {
                     Check our verified Upwork profile
                   </p>
                   <p className="text-white/70 text-xs flex items-center gap-1">
-                    <span>⭐ Top Rated</span>
-                    <span>•</span>
                     <span>View our portfolio</span>
                   </p>
                 </div>

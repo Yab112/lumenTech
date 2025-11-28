@@ -4,13 +4,13 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { Toaster } from "@/components/ui/sonner";
 import { ThemeProvider } from "@/components/theme-provider";
+import { seoKeywords } from "@/app/constants/keywords";
 
 export const metadata: Metadata = {
   title: "LumenTech - Global Software Solutions",
   description:
-    "LumenTech is a global team of passionate developers creating custom software solutions. We specialize in web applications, mobile apps, backend development, and cloud solutions for growing businesses.",
-  keywords:
-    "software development, custom software solutions, web applications, mobile apps, backend development, cloud solutions, startup solutions, software consulting, global team, small business software",
+    "Lumen Labs specializes in engineering scalable software tailored for ambitious startups and visionary teams, focusing on delivering real business outcomes. We excel in building high-impact digital platforms, moving products from MVPs to fully scalable SaaS solutions.",
+  keywords: seoKeywords.join(", "),
   authors: [{ name: "LumenTech" }],
   creator: "LumenTech",
   publisher: "LumenTech",
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "LumenTech - Global Software Solutions",
     description:
-      "LumenTech is a global team of passionate developers creating custom software solutions. We specialize in web applications, mobile apps, and cloud solutions for growing businesses.",
+      "Lumen Labs specializes in engineering scalable software tailored for ambitious startups and visionary teams, focusing on delivering real business outcomes. We excel in building high-impact digital platforms, moving products from MVPs to fully scalable SaaS solutions.",
     url: "https://lumentech.vercel.app/",
     siteName: "LumenTech",
     images: [
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "LumenTech - Global Software Solutions",
     description:
-      "LumenTech is a global team of passionate developers creating custom software solutions. We specialize in web applications, mobile apps, and cloud solutions for growing businesses.",
+      "Lumen Labs specializes in engineering scalable software tailored for ambitious startups and visionary teams, focusing on delivering real business outcomes. We excel in building high-impact digital platforms, moving products from MVPs to fully scalable SaaS solutions.",
     images: ["https://lumentech.vercel.app/lumen-herosection.png"],
     creator: "@lumentech",
   },
@@ -71,6 +71,31 @@ export const metadata: Metadata = {
   formatDetection: {
     telephone: false,
   },
+  icons: {
+    icon: [
+      { url: "/lumen.jpeg", sizes: "any" },
+      { url: "/lumen.jpeg", sizes: "16x16", type: "image/jpeg" },
+      { url: "/lumen.jpeg", sizes: "32x32", type: "image/jpeg" },
+      { url: "/favicon.svg", type: "image/svg+xml" },
+    ],
+    apple: [
+      { url: "/lumen.jpeg", sizes: "180x180", type: "image/jpeg" },
+    ],
+    other: [
+      {
+        rel: "android-chrome",
+        url: "/lumen.jpeg",
+        sizes: "192x192",
+        type: "image/jpeg",
+      },
+      {
+        rel: "android-chrome",
+        url: "/lumen.jpeg",
+        sizes: "512x512",
+        type: "image/jpeg",
+      },
+    ],
+  },
 };
 
 const inter = Inter({ subsets: ["latin"] });
@@ -95,18 +120,116 @@ html {
               "@context": "https://schema.org",
               "@type": "Organization",
               name: "LumenTech",
+              alternateName: "Lumen Labs",
               url: "https://lumentech.vercel.app",
               logo: "https://lumentech.vercel.app/lumen.jpeg",
               description:
-                "Enterprise-grade software solutions for Fortune 500 companies and high-growth startups",
+                "Lumen Labs specializes in engineering scalable software tailored for ambitious startups and visionary teams, focusing on delivering real business outcomes. We excel in building high-impact digital platforms, moving products from MVPs to fully scalable SaaS solutions.",
               address: {
                 "@type": "PostalAddress",
+                addressLocality: "Addis Ababa",
                 addressCountry: "ET",
               },
               contactPoint: {
                 "@type": "ContactPoint",
                 contactType: "customer service",
                 availableLanguage: "English",
+              },
+              serviceArea: {
+                "@type": "GeoCircle",
+                geoMidpoint: {
+                  "@type": "GeoCoordinates",
+                  latitude: "9.1450",
+                  longitude: "38.7614",
+                },
+              },
+              knowsAbout: [
+                "TypeScript",
+                "Python",
+                "Dart",
+                "React",
+                "Next.js",
+                "Angular",
+                "Flutter",
+                "React Native",
+                "Node.js",
+                "FastAPI",
+                "Firebase",
+                "GCP",
+                "AWS",
+                "OpenAI",
+                "LangChain",
+                "Pinecone",
+                "Full-Stack Development",
+                "Microservices",
+                "Event-Driven Systems",
+                "AI/ML",
+                "LLMs",
+                "RAG pipelines",
+                "CI/CD",
+                "Docker",
+                "Kubernetes",
+                "Serverless Architecture",
+              ],
+              hasOfferCatalog: {
+                "@type": "OfferCatalog",
+                name: "Software Development Services",
+                itemListElement: [
+                  {
+                    "@type": "Offer",
+                    itemOffered: {
+                      "@type": "Service",
+                      name: "Full-Stack Product Development",
+                      description:
+                        "Handling everything from backend architecture to frontend interfaces",
+                    },
+                  },
+                  {
+                    "@type": "Offer",
+                    itemOffered: {
+                      "@type": "Service",
+                      name: "Cross-Platform Mobile Apps",
+                      description:
+                        "Using Flutter and React Native to build apps that deploy across iOS and Android",
+                    },
+                  },
+                  {
+                    "@type": "Offer",
+                    itemOffered: {
+                      "@type": "Service",
+                      name: "Cloud-Native Infrastructure",
+                      description:
+                        "Implementing CI/CD, Docker, serverless architectures, and scalable deployments on platforms like GCP, AWS, and Firebase",
+                    },
+                  },
+                  {
+                    "@type": "Offer",
+                    itemOffered: {
+                      "@type": "Service",
+                      name: "Microservices and Event-Driven Systems",
+                      description:
+                        "Designing future-proof architectures with Domain-Driven Design (DDD), message queues, and real-time pipelines",
+                    },
+                  },
+                  {
+                    "@type": "Offer",
+                    itemOffered: {
+                      "@type": "Service",
+                      name: "AI/ML and Automation",
+                      description:
+                        "Integrating advanced AI features such as large language models (LLMs), chatbots, recommendation engines, retrieval-augmented generation (RAG) pipelines, and automation capabilities",
+                    },
+                  },
+                  {
+                    "@type": "Offer",
+                    itemOffered: {
+                      "@type": "Service",
+                      name: "Real-Time and Secure Workflows",
+                      description:
+                        "Managing notifications, live collaboration tools, authentication, and authorization securely and effectively",
+                    },
+                  },
+                ],
               },
               sameAs: [
                 "https://www.upwork.com/agencies/1960387200481392711/",
@@ -121,7 +244,7 @@ html {
         />
         <meta
           property="og:description"
-          content="LumenTech is a global team of passionate developers creating custom software solutions. We specialize in web applications, mobile apps, and cloud solutions for growing businesses."
+          content="Lumen Labs specializes in engineering scalable software tailored for ambitious startups and visionary teams, focusing on delivering real business outcomes. We excel in building high-impact digital platforms, moving products from MVPs to fully scalable SaaS solutions."
         />
         <meta
           property="og:image"
@@ -145,7 +268,7 @@ html {
         />
         <meta
           name="twitter:description"
-          content="LumenTech is a global team of passionate developers creating custom software solutions. We specialize in web applications, mobile apps, and cloud solutions for growing businesses."
+          content="Lumen Labs specializes in engineering scalable software tailored for ambitious startups and visionary teams, focusing on delivering real business outcomes. We excel in building high-impact digital platforms, moving products from MVPs to fully scalable SaaS solutions."
         />
         <meta
           name="twitter:image"
@@ -170,6 +293,26 @@ html {
           name="msapplication-TileImage"
           content="https://lumentech.vercel.app/lumen-herosection.png"
         />
+        <meta name="msapplication-TileColor" content="#1e40af" />
+        
+        {/* Favicon Links - Using lumen.jpeg */}
+        <link rel="icon" type="image/jpeg" href="/lumen.jpeg" />
+        <link rel="shortcut icon" type="image/jpeg" href="/lumen.jpeg" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/lumen.jpeg" />
+        <link rel="manifest" href="/manifest.json" />
+        
+        {/* Additional SEO Meta Tags */}
+        <meta name="geo.region" content="ET-AA" />
+        <meta name="geo.placename" content="Addis Ababa" />
+        <meta name="distribution" content="global" />
+        <meta name="revisit-after" content="7 days" />
+        <meta name="language" content="English" />
+        <meta name="rating" content="general" />
+        
+        {/* Preconnect for Performance */}
+        <link rel="preconnect" href="https://www.upwork.com" />
+        <link rel="dns-prefetch" href="https://www.upwork.com" />
       </head>
       <body className={inter.className}>
         <ThemeProvider

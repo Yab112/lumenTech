@@ -1,4 +1,4 @@
-import { Briefcase, Layers, Mail, User2 } from "lucide-react";
+import { Briefcase, Layers, Mail, User2, Users } from "lucide-react";
 import { IconHome } from "@tabler/icons-react";
 
 export const links = [
@@ -29,6 +29,13 @@ export const links = [
       <Layers className="h-full w-full text-neutral-500 dark:text-neutral-300" />
     ),
     href: "#solutions",
+  },
+  {
+    title: "Team",
+    icon: (
+      <Users className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+    ),
+    href: "#team",
   },
   {
     title: "Contact",

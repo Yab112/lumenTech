@@ -14,7 +14,7 @@ import {
   Layers,
   Mail,
   ArrowRight,
-  Sparkles,
+  Users,
 } from "lucide-react";
 
 interface NavigationProps {
@@ -32,7 +32,7 @@ export function Navigation({ scrollToSection }: NavigationProps) {
       setIsScrolled(window.scrollY > 20);
 
       // Update active section based on scroll position
-      const sections = ["home", "about", "services", "solutions", "contact"];
+      const sections = ["home", "about", "services", "solutions", "team", "contact"];
       const currentSection = sections.find((section) => {
         const element = document.getElementById(section);
         if (element) {
@@ -56,6 +56,7 @@ export function Navigation({ scrollToSection }: NavigationProps) {
     { id: "about", label: "About", icon: User },
     { id: "services", label: "Services", icon: Briefcase },
     { id: "solutions", label: "Solutions", icon: Layers },
+    { id: "team", label: "Team", icon: Users },
     { id: "contact", label: "Contact", icon: Mail },
   ];
 
@@ -126,12 +127,6 @@ export function Navigation({ scrollToSection }: NavigationProps) {
                 <div className="w-2 h-2 bg-green-500 rounded-full mr-2"></div>
                 <span>Available Now</span>
               </div>
-              <div className="flex items-center">
-                <span>25+ Projects</span>
-              </div>
-              <div className="flex items-center">
-                <span>5.0 Rating</span>
-              </div>
             </div>
           </div>
         </div>
@@ -166,9 +161,6 @@ export function Navigation({ scrollToSection }: NavigationProps) {
               <div className="flex items-center">
                 <div className="w-1.5 h-1.5 bg-green-500 rounded-full mr-1"></div>
                 <span>Available</span>
-              </div>
-              <div className="flex items-center">
-                <span>25+ Projects</span>
               </div>
             </div>
           </div>
