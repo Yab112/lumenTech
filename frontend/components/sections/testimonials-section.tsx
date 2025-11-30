@@ -4,16 +4,16 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 
-const technologies = [
-  { name: "React", logo: "⚛️" },
-  { name: "Next.js", logo: "▲" },
-  { name: "TypeScript", logo: "TS" },
-  { name: "Node.js", logo: "🟢" },
-  { name: "Python", logo: "🐍" },
-  { name: "FastAPI", logo: "⚡" },
-  { name: "Flutter", logo: "📱" },
-  { name: "Docker", logo: "🐳" },
-  { name: "AWS", logo: "☁️" },
+const services = [
+  { name: "Web", logo: "🌐" },
+  { name: "Mobile", logo: "📱" },
+  { name: "Cloud Solutions", logo: "☁️" },
+  { name: "AI & ML", logo: "🤖" },
+  { name: "ERP", logo: "📊" },
+  { name: "Automations", logo: "⚙️" },
+  { name: "Desktop App", logo: "💻" },
+  { name: "UI", logo: "🎨" },
+  { name: "Consultation", logo: "💼" },
 ];
 
 export function TestimonialsSection() {
@@ -79,10 +79,10 @@ export function TestimonialsSection() {
               <span className="text-white/90">Businesses</span>
             </h2>
             <p className="text-base md:text-lg text-white/90 mb-6 leading-relaxed max-w-lg">
-              Build with your favorite framework. We specialize in modern
-              technologies and deliver scalable solutions that power your
-              business growth. From web applications to mobile apps, we've got
-              you covered.
+              We deliver comprehensive solutions across all platforms and technologies.
+              From web and mobile applications to cloud infrastructure and AI-powered
+              systems, we've got you covered with scalable solutions that drive
+              business growth.
             </p>
             <Button
               onClick={scrollToContact}
@@ -94,7 +94,7 @@ export function TestimonialsSection() {
             </Button>
           </motion.div>
 
-          {/* Right Side - Technology Grid */}
+          {/* Right Side - Services Grid */}
           <motion.div
             variants={containerVariants}
             initial="hidden"
@@ -102,19 +102,19 @@ export function TestimonialsSection() {
             viewport={{ once: true, margin: "-50px" }}
             className="grid grid-cols-3 gap-3"
           >
-            {technologies.map((tech) => (
+            {services.map((service) => (
               <motion.div
-                key={tech.name}
+                key={service.name}
                 variants={itemVariants}
                 whileHover={{ scale: 1.05, y: -5 }}
                 className="group"
               >
                 <div className="bg-white/10 backdrop-blur-md rounded-xl p-4 sm:p-5 border border-white/20 hover:border-white/40 transition-all duration-300 h-full flex flex-col items-center justify-center aspect-square">
                   <div className="text-2xl sm:text-3xl mb-2 group-hover:scale-110 transition-transform duration-300">
-                    {tech.logo}
+                    {service.logo}
                   </div>
                   <div className="text-white font-semibold text-xs sm:text-sm text-center">
-                    {tech.name}
+                    {service.name}
                   </div>
                 </div>
               </motion.div>

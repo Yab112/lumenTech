@@ -1,1 +1,1 @@
-self.__REACT_LOADABLE_MANIFEST="{}"
+self.__REACT_LOADABLE_MANIFEST='{"app\\\\careers\\\\page.tsx -> @/lib/services/subscriptions":{"id":3576,"files":["static/chunks/576.2b564da83de6f0e8.js"]}}';
