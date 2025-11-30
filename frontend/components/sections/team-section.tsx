@@ -1,6 +1,5 @@
 "use client";
 
-import { motion } from "framer-motion";
 import { Badge } from "@/components/ui/badge";
 import {
   Briefcase,
@@ -61,29 +60,6 @@ export function TeamSection() {
   const manager = teamMembers.find((member) => member.isManager);
   const otherMembers = teamMembers.filter((member) => !member.isManager);
 
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.2,
-        delayChildren: 0.1,
-      },
-    },
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 30 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.6,
-        ease: "easeOut" as const,
-      },
-    },
-  };
-
   return (
     <section
       id="team"
@@ -121,27 +97,18 @@ export function TeamSection() {
         </div>
 
         {/* Team Layout - Manager in center, others on sides */}
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-50px" }}
-          className="grid grid-cols-1 lg:grid-cols-3 gap-8 sm:gap-12 items-start min-h-[600px]"
-        >
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 sm:gap-12 items-start min-h-[600px]">
           {/* Left Team Member */}
           {otherMembers[0] && (
-            <motion.div
-              variants={itemVariants}
-              className="flex flex-col items-center text-center order-2 lg:order-1"
-            >
+            <div className="flex flex-col items-center text-center order-2 lg:order-1">
               <a
                 href={otherMembers[0].upworkUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group block w-full"
               >
-                <motion.div whileHover={{ scale: 1.05 }} className="mb-6">
-                  <div className="w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-slate-200 dark:border-slate-700 group-hover:border-blue-400 dark:group-hover:border-blue-500 transition-all duration-300 mx-auto bg-slate-200 dark:bg-slate-700">
+                <div className="mb-6">
+                  <div className="w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-slate-200 dark:border-slate-700 group-hover:border-blue-400 dark:group-hover:border-blue-500 transition-all duration-200 mx-auto bg-slate-200 dark:bg-slate-700">
                     <img
                       src={otherMembers[0].imageUrl}
                       alt={otherMembers[0].name}
@@ -149,7 +116,7 @@ export function TeamSection() {
                       loading="lazy"
                     />
                   </div>
-                </motion.div>
+                </div>
                 <div className="space-y-3">
                   <h3 className="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
                     {otherMembers[0].name}
@@ -186,25 +153,19 @@ export function TeamSection() {
                   </div>
                 </div>
               </a>
-            </motion.div>
+            </div>
           )}
 
           {/* Manager in Center */}
           {manager && (
-            <motion.div
-              variants={itemVariants}
-              className="flex flex-col items-center text-center order-1 lg:order-2"
-            >
+            <div className="flex flex-col items-center text-center order-1 lg:order-2">
               <a
                 href={manager.upworkUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group block w-full"
               >
-                <motion.div
-                  whileHover={{ scale: 1.05 }}
-                  className="mb-6 relative"
-                >
+                <div className="mb-6 relative">
                   <div className="w-72 h-72 sm:w-80 sm:h-80 md:w-96 md:h-96 rounded-full overflow-hidden border-4 border-blue-400 dark:border-blue-500 group-hover:border-blue-500 dark:group-hover:border-blue-400 transition-all duration-300 mx-auto shadow-2xl group-hover:shadow-blue-500/20 bg-slate-200 dark:bg-slate-700">
                     <img
                       src={manager.imageUrl}
@@ -216,7 +177,7 @@ export function TeamSection() {
                   <div className="absolute -top-2 -right-2 w-12 h-12 bg-yellow-500 rounded-full flex items-center justify-center border-4 border-white dark:border-slate-900 shadow-lg">
                     <Crown className="w-6 h-6 text-white" />
                   </div>
-                </motion.div>
+                </div>
                 <div className="space-y-3">
                   <div className="flex items-center justify-center gap-2">
                     <Badge className="bg-yellow-500 text-white border-0 shadow-md">
@@ -258,23 +219,20 @@ export function TeamSection() {
                   </div>
                 </div>
               </a>
-            </motion.div>
+            </div>
           )}
 
           {/* Right Team Member */}
           {otherMembers[1] && (
-            <motion.div
-              variants={itemVariants}
-              className="flex flex-col items-center text-center order-3"
-            >
+            <div className="flex flex-col items-center text-center order-3">
               <a
                 href={otherMembers[1].upworkUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group block w-full"
               >
-                <motion.div whileHover={{ scale: 1.05 }} className="mb-6">
-                  <div className="w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-slate-200 dark:border-slate-700 group-hover:border-blue-400 dark:group-hover:border-blue-500 transition-all duration-300 mx-auto bg-slate-200 dark:bg-slate-700">
+                <div className="mb-6">
+                  <div className="w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-slate-200 dark:border-slate-700 group-hover:border-blue-400 dark:group-hover:border-blue-500 transition-all duration-200 mx-auto bg-slate-200 dark:bg-slate-700">
                     <img
                       src={otherMembers[1].imageUrl}
                       alt={otherMembers[1].name}
@@ -282,7 +240,7 @@ export function TeamSection() {
                       loading="lazy"
                     />
                   </div>
-                </motion.div>
+                </div>
                 <div className="space-y-3">
                   <h3 className="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
                     {otherMembers[1].name}
@@ -319,18 +277,12 @@ export function TeamSection() {
                   </div>
                 </div>
               </a>
-            </motion.div>
+            </div>
           )}
-        </motion.div>
+        </div>
 
         {/* Upwork Agency Note */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.4 }}
-          className="mt-12 text-center"
-        >
+        <div className="mt-12 text-center">
           <div className="inline-flex items-center gap-2 px-6 py-3 bg-blue-50 dark:bg-blue-900/20 rounded-xl border border-blue-200 dark:border-blue-700">
             <Briefcase className="w-5 h-5 text-blue-600 dark:text-blue-400" />
             <p className="text-sm sm:text-base text-slate-700 dark:text-slate-300">
@@ -347,7 +299,7 @@ export function TeamSection() {
               to see our work and ratings
             </p>
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

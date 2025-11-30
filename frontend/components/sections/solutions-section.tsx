@@ -1,6 +1,5 @@
 "use client";
 
-import { motion } from "framer-motion";
 import { Badge } from "@/components/ui/badge";
 import {
   Zap,
@@ -169,12 +168,11 @@ export function SolutionsSection() {
 
           {/* Carousel Container */}
           <div className="overflow-hidden w-full">
-            <motion.div
-              className="flex"
-              animate={{
-                x: `-${currentIndex * (isMobile ? 100 : 33.333)}%`,
+            <div
+              className="flex transition-transform duration-400 ease-out"
+              style={{
+                transform: `translateX(-${currentIndex * (isMobile ? 100 : 33.333)}%)`,
               }}
-              transition={{ duration: 0.5, ease: "easeInOut" }}
             >
               {extendedFeatures.map((feature, index) => (
                 <div
@@ -215,7 +213,7 @@ export function SolutionsSection() {
                   </div>
                 </div>
               ))}
-            </motion.div>
+            </div>
           </div>
 
           {/* Dots Indicator */}

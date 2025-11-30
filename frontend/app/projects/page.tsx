@@ -5,7 +5,6 @@ import { Navigation } from "@/components/navigation";
 import { FooterSection } from "@/components/sections/footer-section";
 import { ScrollProgress } from "@/components/ui/scroll-progress";
 import { ScrollToTop } from "@/components/ui/scroll-to-top";
-import { motion } from "framer-motion";
 import {
   FolderKanban,
   ExternalLink,
@@ -152,12 +151,7 @@ export default function ProjectsPage() {
 
         {/* Content */}
         <div className="relative z-10 h-full flex items-center justify-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center max-w-4xl mx-auto px-4"
-          >
+          <div className="text-center max-w-4xl mx-auto px-4">
             <div className="flex items-center justify-center gap-3 mb-6">
               <FolderKanban className="w-10 h-10 text-white" />
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white">
@@ -168,7 +162,7 @@ export default function ProjectsPage() {
               Explore the innovative solutions we've built for our clients. From
               web applications to AI-powered systems.
             </p>
-          </motion.div>
+          </div>
         </div>
       </div>
 
@@ -220,11 +214,8 @@ export default function ProjectsPage() {
           ) : projects.length > 0 ? (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {projects.map((project, index) => (
-                <motion.div
+                <div
                   key={project.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.4, delay: index * 0.1 }}
                 >
                   <Card className="h-full flex flex-col">
                     {/* Featured Image */}
@@ -319,7 +310,7 @@ export default function ProjectsPage() {
                       </div>
                     </CardContent>
                   </Card>
-                </motion.div>
+                </div>
               ))}
             </div>
           ) : (

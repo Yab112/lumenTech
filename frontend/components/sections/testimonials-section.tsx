@@ -1,6 +1,5 @@
 "use client";
 
-import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 
@@ -24,29 +23,6 @@ export function TestimonialsSection() {
     }
   };
 
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.05,
-        delayChildren: 0.2,
-      },
-    },
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, scale: 0.8 },
-    visible: {
-      opacity: 1,
-      scale: 1,
-      transition: {
-        duration: 0.4,
-        ease: [0.4, 0, 0.2, 1] as const,
-      },
-    },
-  };
-
   return (
     <section className="relative py-12 sm:py-16 px-4 sm:px-6 lg:px-8 overflow-hidden">
       {/* Darker Blue Gradient Background */}
@@ -67,13 +43,7 @@ export function TestimonialsSection() {
       <div className="relative z-10 max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Left Side - Text Content */}
-          <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-            className="text-white"
-          >
+          <div className="text-white">
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight mb-4">
               Trusted by Growing <br />
               <span className="text-white/90">Businesses</span>
@@ -92,24 +62,16 @@ export function TestimonialsSection() {
               Connect With Us
               <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
             </Button>
-          </motion.div>
+          </div>
 
           {/* Right Side - Services Grid */}
-          <motion.div
-            variants={containerVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-50px" }}
-            className="grid grid-cols-3 gap-3"
-          >
+          <div className="grid grid-cols-3 gap-3">
             {services.map((service) => (
-              <motion.div
+              <div
                 key={service.name}
-                variants={itemVariants}
-                whileHover={{ scale: 1.05, y: -5 }}
                 className="group"
               >
-                <div className="bg-white/10 backdrop-blur-md rounded-xl p-4 sm:p-5 border border-white/20 hover:border-white/40 transition-all duration-300 h-full flex flex-col items-center justify-center aspect-square">
+                <div className="bg-white/10 backdrop-blur-md rounded-xl p-4 sm:p-5 border border-white/20 hover:border-white/40 transition-all duration-200 h-full flex flex-col items-center justify-center aspect-square">
                   <div className="text-2xl sm:text-3xl mb-2 group-hover:scale-110 transition-transform duration-300">
                     {service.logo}
                   </div>
@@ -117,9 +79,9 @@ export function TestimonialsSection() {
                     {service.name}
                   </div>
                 </div>
-              </motion.div>
+              </div>
             ))}
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>

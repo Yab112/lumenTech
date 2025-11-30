@@ -1,6 +1,5 @@
 "use client";
 
-import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -173,12 +172,7 @@ export function ContactSection({ scrollToSection }: ContactSectionProps) {
         </div>
 
         <div className="flex flex-col lg:flex-row gap-6 sm:gap-8 md:gap-12">
-          <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            className="w-full lg:w-2/3"
-          >
+          <div className="w-full lg:w-2/3">
             <div className="relative overflow-hidden rounded-xl border border-slate-200 dark:border-slate-700 w-full">
               <div className="relative p-4 sm:p-6">
                 <h3 className="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white mb-6 sm:mb-8 flex items-center">
@@ -190,7 +184,7 @@ export function ContactSection({ scrollToSection }: ContactSectionProps) {
                   className="space-y-3 sm:space-y-4"
                 >
                   <div className="grid md:grid-cols-2 gap-3 sm:gap-4">
-                    <motion.div className="space-y-2">
+                    <div className="space-y-2">
                       <label className="text-sm font-medium text-slate-700 dark:text-slate-300">
                         Full Name *
                       </label>
@@ -202,8 +196,8 @@ export function ContactSection({ scrollToSection }: ContactSectionProps) {
                         required
                         className="h-10 sm:h-12 border-slate-300 dark:border-slate-600 focus:border-blue-500 focus:ring-blue-500 rounded-lg transition-all duration-200 text-sm"
                       />
-                    </motion.div>
-                    <motion.div className="space-y-2">
+                    </div>
+                    <div className="space-y-2">
                       <label className="text-sm font-medium text-slate-700 dark:text-slate-300">
                         Work Email *
                       </label>
@@ -216,10 +210,10 @@ export function ContactSection({ scrollToSection }: ContactSectionProps) {
                         required
                         className="h-10 sm:h-12 border-slate-300 dark:border-slate-600 focus:border-blue-500 focus:ring-blue-500 rounded-lg transition-all duration-200 text-sm"
                       />
-                    </motion.div>
+                    </div>
                   </div>
                   <div className="grid md:grid-cols-2 gap-3 sm:gap-4">
-                    <motion.div className="space-y-2">
+                    <div className="space-y-2">
                       <label className="text-sm font-medium text-slate-700 dark:text-slate-300">
                         Company Name *
                       </label>
@@ -231,8 +225,8 @@ export function ContactSection({ scrollToSection }: ContactSectionProps) {
                         required
                         className="h-10 sm:h-12 border-slate-300 dark:border-slate-600 focus:border-blue-500 focus:ring-blue-500 rounded-lg transition-all duration-200 text-sm"
                       />
-                    </motion.div>
-                    <motion.div className="space-y-2">
+                    </div>
+                    <div className="space-y-2">
                       <label className="text-sm font-medium text-slate-700 dark:text-slate-300">
                         Phone Number
                       </label>
@@ -243,9 +237,9 @@ export function ContactSection({ scrollToSection }: ContactSectionProps) {
                         placeholder="+251 962 473 792"
                         className="h-10 sm:h-12 border-slate-300 dark:border-slate-600 focus:border-blue-500 focus:ring-blue-500 rounded-lg transition-all duration-200 text-sm"
                       />
-                    </motion.div>
+                    </div>
                   </div>
-                  <motion.div className="space-y-2">
+                  <div className="space-y-2">
                     <label className="text-sm font-medium text-slate-700 dark:text-slate-300">
                       Project Details *
                     </label>
@@ -258,8 +252,8 @@ export function ContactSection({ scrollToSection }: ContactSectionProps) {
                       required
                       className="border-slate-300 dark:border-slate-600 focus:border-blue-500 focus:ring-blue-500 rounded-lg transition-all duration-200 text-sm"
                     />
-                  </motion.div>
-                  <motion.div>
+                  </div>
+                  <div>
                     <Button
                       type="submit"
                       disabled={isSubmitting}
@@ -277,28 +271,19 @@ export function ContactSection({ scrollToSection }: ContactSectionProps) {
                         </>
                       )}
                     </Button>
-                  </motion.div>
+                  </div>
                   <p className="text-xs text-slate-500 dark:text-slate-400 text-center">
                     We'll respond within 24 hours during business days
                   </p>
                 </form>
               </div>
             </div>
-          </motion.div>
+          </div>
 
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            className="w-full lg:w-1/3 space-y-3 sm:space-y-4 md:space-y-6"
-          >
+          <div className="w-full lg:w-1/3 space-y-3 sm:space-y-4 md:space-y-6">
             {contactInfo.map((contact, index) => (
-              <motion.div
+              <div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
                 onClick={contact.action}
                 className="group cursor-pointer"
               >
@@ -333,14 +318,9 @@ export function ContactSection({ scrollToSection }: ContactSectionProps) {
                     </div>
                   </div>
                 </div>
-              </motion.div>
+              </div>
             ))}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="relative overflow-hidden rounded-2xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 transition-all duration-300 p-4 sm:p-6 flex items-center"
-            >
+            <div className="relative overflow-hidden rounded-2xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 transition-all duration-300 p-4 sm:p-6 flex items-center">
               <div className="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center mr-3 sm:mr-4">
                 <Rocket className="w-5 h-5 sm:w-6 sm:h-6 text-blue-600 dark:text-blue-400" />
               </div>
@@ -359,11 +339,8 @@ export function ContactSection({ scrollToSection }: ContactSectionProps) {
                   .
                 </p>
               </div>
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+            </div>
+            <div
               onClick={() =>
                 window.open(
                   "https://www.upwork.com/agencies/1960387200481392711/",
@@ -401,8 +378,8 @@ export function ContactSection({ scrollToSection }: ContactSectionProps) {
                   <ArrowRight className="w-5 h-5 text-white" />
                 </div>
               </div>
-            </motion.div>
-          </motion.div>
+            </div>
+          </div>
         </div>
       </div>
     </section>

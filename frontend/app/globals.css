@@ -259,6 +259,33 @@ select:focus {
   transform: translateZ(0);
 }
 
+/* GPU acceleration for smooth animations */
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Optimize all motion components */
+[data-framer-component] {
+  will-change: transform, opacity;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+/* GPU acceleration for smooth animations */
+[data-framer-motion],
+[data-framer-motion] * {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+/* Optimize framer-motion components */
+[data-framer-component] {
+  will-change: transform, opacity;
+  transform: translateZ(0);
+}
+
 /* Smooth scroll animations */
 .motion-safe\:animate-fade-in-up {
   animation: fadeInUp 0.8s ease-out;
@@ -293,6 +320,8 @@ select:focus {
 /* Optimize viewport animations */
 [data-framer-motion] {
   will-change: transform, opacity;
+  transform: translateZ(0);
+  backface-visibility: hidden;
 }
 
 /* Reduce motion for better performance */

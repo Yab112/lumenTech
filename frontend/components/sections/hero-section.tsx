@@ -1,6 +1,5 @@
 "use client";
 import { useState, useEffect } from "react";
-import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import {
@@ -86,53 +85,24 @@ export function HeroSection({ scrollToSection }: HeroSectionProps) {
         />
       </div>
 
-      {/* Floating Elements - Simplified for Mobile */}
+      {/* Floating Elements - Static */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         {/* Large Circle */}
-        <motion.div
+        <div
           className="absolute w-64 h-64 sm:w-96 sm:h-96 bg-gradient-to-r from-blue-400/10 to-purple-400/10 rounded-full blur-3xl"
           style={{ top: "10%", left: "5%" }}
-          animate={{
-            scale: [1, 1.1, 1],
-            opacity: [0.2, 0.4, 0.2],
-          }}
-          transition={{
-            duration: 15,
-            repeat: Number.POSITIVE_INFINITY,
-            ease: "easeInOut",
-          }}
         />
 
         {/* Medium Circle */}
-        <motion.div
+        <div
           className="absolute w-48 h-48 sm:w-64 sm:h-64 bg-gradient-to-r from-purple-400/8 to-blue-400/8 rounded-full blur-3xl"
           style={{ top: "60%", right: "10%" }}
-          animate={{
-            scale: [1.1, 1, 1.1],
-            opacity: [0.3, 0.5, 0.3],
-          }}
-          transition={{
-            duration: 20,
-            repeat: Number.POSITIVE_INFINITY,
-            ease: "easeInOut",
-            delay: 5,
-          }}
         />
 
         {/* Small Accent */}
-        <motion.div
+        <div
           className="absolute w-24 h-24 sm:w-32 sm:h-32 bg-gradient-to-r from-emerald-400/8 to-cyan-400/8 rounded-full blur-2xl"
           style={{ top: "30%", right: "30%" }}
-          animate={{
-            scale: [1, 1.2, 1],
-            opacity: [0.2, 0.4, 0.2],
-          }}
-          transition={{
-            duration: 12,
-            repeat: Number.POSITIVE_INFINITY,
-            ease: "easeInOut",
-            delay: 2,
-          }}
         />
       </div>
 
@@ -140,12 +110,7 @@ export function HeroSection({ scrollToSection }: HeroSectionProps) {
       <div className="relative z-10 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full pt-14 sm:pt-0">
         <div className="text-center ">
           {/* Company Badge */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="mb-6 sm:mb-8"
-          >
+          <div className="mb-6 sm:mb-8">
             <Badge
               variant="secondary"
               className="px-4 py-2 bg-white/80 dark:bg-slate-800/80 text-blue-700 dark:text-blue-300 border border-blue-200 dark:border-blue-800 backdrop-blur-sm text-sm sm:text-base font-medium"
@@ -153,15 +118,10 @@ export function HeroSection({ scrollToSection }: HeroSectionProps) {
               <TrendingUp className="w-4 h-4 mr-2" />
               Global Software Solutions
             </Badge>
-          </motion.div>
+          </div>
 
           {/* Main Headline */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="mb-8 sm:mb-12"
-          >
+          <div className="mb-8 sm:mb-12">
             <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-7xl xl:text-8xl text-slate-900 dark:text-white mb-6 leading-tight ">
               Build Your Digital
               <br />
@@ -180,15 +140,10 @@ export function HeroSection({ scrollToSection }: HeroSectionProps) {
                 </span>
               </div>
             </h1>
-          </motion.div>
+          </div>
 
           {/* Description */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className="mb-8 sm:mb-12"
-          >
+          <div className="mb-8 sm:mb-12">
             <p className="text-base sm:text-lg md:text-xl lg:text-xl text-slate-600 dark:text-slate-300 leading-relaxed max-w-4xl mx-auto ">
               We specialize in engineering scalable software tailored for
               ambitious startups and visionary teams, focusing on delivering
@@ -196,15 +151,10 @@ export function HeroSection({ scrollToSection }: HeroSectionProps) {
               platforms, moving products from MVPs to fully scalable SaaS
               solutions.
             </p>
-          </motion.div>
+          </div>
 
           {/* Key Features */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-            className="mb-8 sm:mb-12"
-          >
+          <div className="mb-8 sm:mb-12">
             <div className="flex flex-wrap justify-center gap-4 sm:gap-6 text-sm sm:text-base">
               <div className="flex items-center text-slate-600 dark:text-slate-400 bg-white/50 dark:bg-slate-800/50 px-3 py-2 rounded-full backdrop-blur-sm border border-slate-200/50 dark:border-slate-700/50">
                 <Star className="w-4 h-4 text-blue-600 mr-2" />
@@ -219,34 +169,29 @@ export function HeroSection({ scrollToSection }: HeroSectionProps) {
                 Secure & Reliable
               </div>
             </div>
-          </motion.div>
+          </div>
 
           {/* CTA Buttons - Mobile First */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.8 }}
-            className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center mb-8 sm:mb-12"
-          >
-            <motion.div whileTap={{ scale: 0.98 }} className="w-full sm:w-auto">
+          <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center mb-8 sm:mb-12">
+            <div className="w-full sm:w-auto">
               <Button
                 className="hover:bg-blue-700 w-full sm:w-auto bg-blue-600 cursor-pointer text-white  px-6 sm:px-8 py-3 sm:py-4 rounded-xl text-base  transition-all duration-300 "
                 onClick={() => scrollToSection("contact")}
               >
                 Get Started
               </Button>
-            </motion.div>
+            </div>
 
-            <motion.div whileTap={{ scale: 0.98 }} className="w-full sm:w-auto">
+            <div className="w-full sm:w-auto">
               <Button
                 variant="outline"
-                className="w-full sm:w-auto border-2 border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-800 text-slate-900 dark:text-white hover:bg-slate-50 dark:hover:bg-slate-700 fx px-6 sm:px-8 py-3 sm:py-4 rounded-xl text-base  transition-all duration-300"
+                className="w-full sm:w-auto border-2 border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-800 text-slate-900 dark:text-white hover:bg-slate-50 dark:hover:bg-slate-700 fx px-6 sm:px-8 py-3 sm:py-4 rounded-xl text-base  transition-all duration-200"
                 onClick={() => scrollToSection("about")}
               >
                 Learn More
               </Button>
-            </motion.div>
-          </motion.div>
+            </div>
+          </div>
         </div>
       </div>
     </section>

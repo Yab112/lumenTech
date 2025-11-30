@@ -5,10 +5,8 @@ import { Navigation } from "@/components/navigation";
 import { FooterSection } from "@/components/sections/footer-section";
 import { ScrollProgress } from "@/components/ui/scroll-progress";
 import { ScrollToTop } from "@/components/ui/scroll-to-top";
-import { motion } from "framer-motion";
 import { BookOpen, Calendar, Clock, User, ArrowRight } from "lucide-react";
 import Link from "next/link";
-import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Skeleton } from "@/components/ui/skeleton";
 import { getBlogs, type Blog } from "@/lib/services/blogs";
@@ -86,12 +84,7 @@ export default function BlogPage() {
         
         {/* Content */}
         <div className="relative z-10 h-full flex items-center justify-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center max-w-4xl mx-auto px-4"
-          >
+          <div className="text-center max-w-4xl mx-auto px-4">
             <div className="flex items-center justify-center gap-3 mb-6">
               <BookOpen className="w-10 h-10 text-white" />
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white">
@@ -101,7 +94,7 @@ export default function BlogPage() {
             <p className="text-xl md:text-2xl text-white/90 max-w-2xl mx-auto leading-relaxed">
               Insights, tutorials, and updates from our team of developers, UI designers, and AI engineers.
             </p>
-          </motion.div>
+          </div>
         </div>
       </div>
 
@@ -125,11 +118,8 @@ export default function BlogPage() {
           ) : (
             <div className="space-y-16">
               {blogs.map((blog, index) => (
-                <motion.article
+                <article
                   key={blog.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
                   className="group"
                 >
                   <Link href={`/blog/${blog.slug}`}>
@@ -200,7 +190,7 @@ export default function BlogPage() {
                       </div>
                     </div>
                   </Link>
-                </motion.article>
+                </article>
               ))}
             </div>
           )}
