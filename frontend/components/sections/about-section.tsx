@@ -1,6 +1,5 @@
 "use client";
 
-import { motion } from "framer-motion";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import {
@@ -47,29 +46,6 @@ export function AboutSection() {
     },
   ];
 
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
-        delayChildren: 0.2,
-      },
-    },
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.6,
-        ease: "easeOut" as const,
-      },
-    },
-  };
-
   return (
     <section
       id="about"
@@ -111,34 +87,20 @@ export function AboutSection() {
         {/* Main Content - Image and Content Side by Side */}
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center mb-12">
           {/* Left Column - Image */}
-          <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            className="relative order-2 lg:order-1"
-          >
+          <div className="relative order-2 lg:order-1">
             <div className="relative">
               {/* Main Image */}
-              <motion.div
-                whileHover={{ scale: 1.02 }}
-                className="relative overflow-hidden rounded-2xl shadow-2xl"
-              >
+              <div className="relative overflow-hidden rounded-2xl shadow-2xl">
                 <img
                   src="/aboutus.jpg"
                   alt="LumenTech Team"
                   className="w-full h-auto object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent" />
-              </motion.div>
+              </div>
 
               {/* Floating Achievement Card */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.3 }}
-                className="absolute -bottom-6 -left-6 bg-white dark:bg-slate-800 rounded-xl p-6 shadow-xl border border-slate-200 dark:border-slate-700"
-              >
+              <div className="absolute -bottom-6 -left-6 bg-white dark:bg-slate-800 rounded-xl p-6 shadow-xl border border-slate-200 dark:border-slate-700">
                 <div className="flex items-center space-x-3">
                   <div className="w-12 h-12 bg-blue-600 rounded-xl flex items-center justify-center">
                     <Award className="w-6 h-6 text-white" />
@@ -152,16 +114,10 @@ export function AboutSection() {
                     </div> */}
                   </div>
                 </div>
-              </motion.div>
+              </div>
 
               {/* Floating Rating Card */}
-              <motion.div
-                initial={{ opacity: 0, x: 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.5 }}
-                className="absolute -top-6 -right-6 bg-white dark:bg-slate-800 rounded-xl p-4 shadow-xl border border-slate-200 dark:border-slate-700"
-              >
+              <div className="absolute -top-6 -right-6 bg-white dark:bg-slate-800 rounded-xl p-4 shadow-xl border border-slate-200 dark:border-slate-700">
                 <div className="text-center">
                   <div className="flex items-center justify-center mb-1">
                     {[...Array(5)].map((_, i) => (
@@ -178,17 +134,12 @@ export function AboutSection() {
                     Client Rating
                   </div> */}
                 </div>
-              </motion.div>
+              </div>
             </div>
-          </motion.div>
+          </div>
 
           {/* Right Column - Content */}
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            className="space-y-8 order-1 lg:order-2"
-          >
+          <div className="space-y-8 order-1 lg:order-2">
             {/* Mission Statement */}
             <div className="space-y-6">
               <div className="flex items-center space-x-3 mb-4">
@@ -215,12 +166,8 @@ export function AboutSection() {
               </h3>
               <div className="space-y-4">
                 {values.map((value, index) => (
-                  <motion.div
+                  <div
                     key={index}
-                    initial={{ opacity: 0, x: -20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: index * 0.1 }}
                     className="flex items-start space-x-4 group"
                   >
                     <div className="w-12 h-12 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
@@ -234,17 +181,13 @@ export function AboutSection() {
                         {value.description}
                       </p>
                     </div>
-                  </motion.div>
+                  </div>
                 ))}
               </div>
             </div>
 
             {/* Upwork Agency Link */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.4 }}
+            <div
               onClick={() =>
                 window.open(
                   "https://www.upwork.com/agencies/1960387200481392711/",
@@ -287,8 +230,8 @@ export function AboutSection() {
                   </div>
                 </div>
               </div>
-            </motion.div>
-          </motion.div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
