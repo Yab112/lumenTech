@@ -28,7 +28,9 @@ export function Navigation({ scrollToSection }: NavigationProps) {
   }, []);
 
   const navItems = [
-    { id: "home", label: "Home", icon: Home, href: "/" },
+    { id: "home", 
+      label: "Home", 
+      icon: Home, href: "/" },
     {
       id: "careers",
       label: "Careers",
