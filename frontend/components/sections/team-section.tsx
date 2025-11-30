@@ -29,7 +29,7 @@ const teamMembers = [
     jobSuccess: "100% Job Success",
   },
   {
-    name: "Sosina Belay",
+    name: "Sosina Esayas",
     role: "Developer",
     description: "Experienced developer delivering quality software solutions",
     upworkUrl: "https://www.upwork.com/freelancers/~01da1ecb0665ff6f4f",
